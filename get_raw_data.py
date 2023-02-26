@@ -33,8 +33,8 @@ def get_raw_data(key_value, stock):
     return stock_date_filter_sub
 
 
-IBM_date_filter_sub = get_raw_data('OKXM9T3K23QCCSGO', 'IBM')
-Apple_date_filter_sub = get_raw_data('OKXM9T3K23QCCSGO', 'AAPL')
+IBM_date_filter_sub = get_raw_data('OKXM9T3K23QCCSGO', 'IBM') #get raw stock data for IBM
+Apple_date_filter_sub = get_raw_data('OKXM9T3K23QCCSGO', 'AAPL') #get raw stock data for Apple (AAPL)
 
 total_financial_data = pd.concat([IBM_date_filter_sub, Apple_date_filter_sub], axis=0)
 

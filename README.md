@@ -47,7 +47,7 @@ psql -U postgres -d <DATABASE-NAME> -f <Full path to schema.sql file>/schema.sql
 python get_raw_data.py
 ```
 ## Task 2: Financial API:
-(1) Create an .env inside financial/ and fill in your selected parameters:
+(1) Create a file named `.env` inside `financial/` and fill in your selected parameters:
 ```bash
 PG_HOST=<host>
 PG_PORT=5432

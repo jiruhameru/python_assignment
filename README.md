@@ -47,13 +47,13 @@ psql -U postgres -d <DATABASE-NAME> -f <Full path to schema.sql file>/schema.sql
 python get_raw_data.py
 ```
 ## Task 2: Financial API:
-(1) Inside `get_financial_data API.py`, fill in your local database information:
+(1) Inside `get_financial_data_API.py`, fill in your local database information:
 ```bash
 conn_string = "host='<host>' dbname='<database>' user='<user>' password='<password>'"            
 ```
 (2) To get the financial_data API information, run:
 ```bash
-python get_financial_data API.py
+python get_financial_data_API.py
 ```
 Then, in your favorite browser, type the following URL, filling in the information between the angle brackets <> (all parameters are optional):
 ```bash

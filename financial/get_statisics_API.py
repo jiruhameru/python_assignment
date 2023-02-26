@@ -88,7 +88,7 @@ api.add_resource(Statistics, '/api/statistics')
 
 # Running the Local Server
 if __name__ == '__main__':
-    app.run(host='localhost', port=5000)
+    app.run(host='0.0.0.0', port=5000)
 
 
 # http://localhost:5000/api/statistics?start_date=2023-02-10&end_date=2023-02-20&symbol=IBM

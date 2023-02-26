@@ -42,3 +42,55 @@ create database local_db;
 ```bash
 psql -U postgres -d <DATABASE-NAME> -f <Full path to schema.sql file>/schema.sql
 ```
+(3) To fetch the data and store it in the local database, run:
+```bash
+python get_raw_data.py
+```
+## Task 2: Financial API:
+(1) Create an .env inside financial/ and fill in your selected parameters:
+```bash
+PG_HOST=<host>
+PG_PORT=5432
+PG_USER=<postgresql user>>
+PG_PASSWORD=<password>
+PG_DATABASE=<database>
+```
+(2) To get the financial_data API information, run:
+```bash
+python get_financial_data API.py
+```
+Then, in your favorite browser, type the following URL, filling in the information between the angle brackets <> (all parameters are optional):
+```bash
+http://localhost:5000/api/financial_data?start_date=<yyy-mm-dd>&end_date=<yyyy-mm-dd>&symbol=<SYMBOL>&limit=<limit>&page=<page>
+```
+
+E.g.: 
+```bash
+http://localhost:5000/api/financial_data?start_date=2023-02-10&end_date=2023-02-20&symbol=IBM&limit=10&page=9
+```
+(3) To get the statistics API information, run: 
+```bash
+python get_statisics_API.py
+```
+Then type the following URL in your browser, filling in the information between the angle brackets <> (all parameters are required):
+```bash
+http://localhost:5000/api/statistics?start_date=<yyyy-mm-dd>&end_date=<yyyy-mm-dd>&symbol=<symbol>
+```
+
+E.g.:
+```bash
+http://localhost:5000/api/statistics?start_date=2023-02-10&end_date=2023-02-20&symbol=IBM
+```
+## Dockerfile (docker-compose)
+Run:
+```bash
+sudo docker-compose build
+```
+Then:
+```bash
+sudo docker-compose up
+```
+
+
+
+

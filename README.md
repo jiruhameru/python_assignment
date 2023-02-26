@@ -30,7 +30,7 @@ sudo systemctl start postgresql.service
 ```
 
 ## Task 1: Fetch and store stock data:
-`get_raw_data.py` fetches the raw data for IBM and Apple within the last two weeks. Once the raw data is fetched, it is processed locally into a json and csv file, and then stored in a local database.
+`get_raw_data.py` fetches the raw data for IBM and Apple within the last two weeks. Once the raw data is fetched, it is processed locally into a json and csv files, and then stored in a local database.
 
 (1) Create local database nemaed: `local_db`
 ```bash

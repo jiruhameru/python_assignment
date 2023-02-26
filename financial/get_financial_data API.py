@@ -7,7 +7,6 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 from datetime import datetime
 import os 
-from dotenv import load_dotenv
 
 app = Flask(__name__)
 api = Api(app)
@@ -26,12 +25,8 @@ class FinancialData(Resource):
         error = ''
 
         try:
-            conn = psycopg2.connect(host=os.environ.get('PG_HOST'),
-                            port=os.environ.get('PG_PORT'),
-                            user=os.environ.get('PG_USER'),
-                            password=os.environ.get('PG_PASSWORD'),
-                            dbname=os.environ.get('PG_DATABASE'))
-
+            conn_string = "host='localhost' dbname='local_db' user='postgres' password='locpass'"
+            conn = psycopg2.connect(conn_string)
 
             cursor = conn.cursor()
                 

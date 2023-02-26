@@ -47,13 +47,9 @@ psql -U postgres -d <DATABASE-NAME> -f <Full path to schema.sql file>/schema.sql
 python get_raw_data.py
 ```
 ## Task 2: Financial API:
-(1) Create a file named `.env` inside `financial/` and fill in your selected parameters:
+(1) Inside `get_financial_data API.py`, fill in your local database information:
 ```bash
-PG_HOST=<host>
-PG_PORT=5432
-PG_USER=<postgresql user>>
-PG_PASSWORD=<password>
-PG_DATABASE=<database>
+conn_string = "host='<host>' dbname='<database>' user='<user>' password='<password>'"            
 ```
 (2) To get the financial_data API information, run:
 ```bash
@@ -68,7 +64,12 @@ E.g.:
 ```bash
 http://localhost:5000/api/financial_data?start_date=2023-02-10&end_date=2023-02-20&symbol=IBM&limit=10&page=9
 ```
-(3) To get the statistics API information, run: 
+(3) To get the statistics API information, 
+Inside `get_statisics_API.py`, fill in your local database information:
+```bash
+conn_string = "host='<host>' dbname='<database>' user='<user>' password='<password>'"            
+```
+Then run: 
 ```bash
 python get_statisics_API.py
 ```

@@ -83,7 +83,14 @@ E.g.:
 http://localhost:5000/api/statistics?start_date=2023-02-10&end_date=2023-02-20&symbol=IBM
 ```
 ## Dockerfile (docker-compose)
-Run:
+(1) Make sure the port is not in use:
+```bash
+sudo lsof -i:5432
+```
+```bash
+sudo kill -9 <PID> #kill the process using the port
+```
+(2) Run:
 ```bash
 sudo docker-compose build
 ```

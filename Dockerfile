@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 5000:5000
 
-CMD ["python", "./get_financial_data_API.py"]
+CMD ["python", "./financial/get_financial_data_API.py"]
